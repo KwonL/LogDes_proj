@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Kwon_proj\cpu_top.ncd
+OUTFILE=C:\Kwon_proj\cpu_top.bit
+FAMILY=Spartan3
+PART=xc3s200-4ft256
+WORKINGDIR=C:\Kwon_proj
+LICENSE=WebPack
+USER_INFO=210698964_1777488715_210550733_006

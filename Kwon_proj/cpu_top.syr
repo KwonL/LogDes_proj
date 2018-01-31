@@ -1,0 +1,742 @@
+Release 14.3 - xst P.40xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: cpu_top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "cpu_top.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "cpu_top"
+Output Format                      : NGC
+Target Device                      : xc3s200-4-ft256
+
+---- Source Options
+Top Module Name                    : cpu_top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "binary_to_segment.v" in library work
+Compiling verilog file "output_logic.v" in library work
+Module <binary_to_segment> compiled
+Compiling verilog file "cpu.v" in library work
+Compiling verilog include file "opcodes.v"
+Module <output_logic> compiled
+Module <cpu> compiled
+Module <Register> compiled
+Module <Controller> compiled
+Module <ALU> compiled
+Compiling verilog file "clock_generation.v" in library work
+Module <sign_extension> compiled
+Compiling verilog file "cpu_top.v" in library work
+Module <clock_generation> compiled
+Module <cpu_top> compiled
+No errors in compilation
+Analysis of file <"cpu_top.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <cpu_top> in library <work>.
+
+Analyzing hierarchy for module <clock_generation> in library <work>.
+
+Analyzing hierarchy for module <cpu> in library <work>.
+
+Analyzing hierarchy for module <output_logic> in library <work>.
+
+Analyzing hierarchy for module <Controller> in library <work>.
+
+Analyzing hierarchy for module <Register> in library <work>.
+
+Analyzing hierarchy for module <ALU> in library <work>.
+
+Analyzing hierarchy for module <sign_extension> in library <work>.
+
+Analyzing hierarchy for module <binary_to_segment> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <cpu_top>.
+Module <cpu_top> is correct for synthesis.
+ 
+Analyzing module <clock_generation> in library <work>.
+Module <clock_generation> is correct for synthesis.
+ 
+Analyzing module <cpu> in library <work>.
+INFO:Xst:1433 - Contents of array <memory> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+WARNING:Xst:905 - "cpu.v" line 110: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <memory>
+WARNING:Xst:2323 - "cpu.v" line 116: Parameter 2 is not constant in call of system task $display.
+"cpu.v" line 116: $display : instruction : %b
+Module <cpu> is correct for synthesis.
+ 
+Analyzing module <Controller> in library <work>.
+WARNING:Xst:2323 - "cpu.v" line 226: Parameter 2 is not constant in call of system task $display.
+"cpu.v" line 226: $display : opcode : %b
+WARNING:Xst:2323 - "cpu.v" line 270: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "cpu.v" line 270: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "cpu.v" line 270: Parameter 4 is not constant in call of system task $display.
+WARNING:Xst:2323 - "cpu.v" line 270: Parameter 5 is not constant in call of system task $display.
+"cpu.v" line 270: $display : ALU_SEL, JMP, LHI, REG_W : %b %b %b %b
+WARNING:Xst:905 - "cpu.v" line 225: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <cpu_enable>, <ALU_SEL>, <Jmp>, <LHI>, <Reg_write>
+Module <Controller> is correct for synthesis.
+ 
+Analyzing module <Register> in library <work>.
+WARNING:Xst:2323 - "cpu.v" line 181: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "cpu.v" line 181: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "cpu.v" line 181: Parameter 4 is not constant in call of system task $display.
+WARNING:Xst:2323 - "cpu.v" line 181: Parameter 5 is not constant in call of system task $display.
+"cpu.v" line 181: $display : data1 : %b, data2 : %b, reg1 : %b, reg2 : %b
+WARNING:Xst:905 - "cpu.v" line 180: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <reg1>, <reg2>
+WARNING:Xst:2323 - "cpu.v" line 198: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "cpu.v" line 198: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "cpu.v" line 198: Parameter 4 is not constant in call of system task $display.
+"cpu.v" line 198: $display : write data : %b, write reg : %b, wen : %b
+WARNING:Xst:905 - "cpu.v" line 197: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <wdata>, <wreg>, <Write_en>
+Module <Register> is correct for synthesis.
+ 
+Analyzing module <ALU> in library <work>.
+Module <ALU> is correct for synthesis.
+ 
+Analyzing module <sign_extension> in library <work>.
+Module <sign_extension> is correct for synthesis.
+ 
+Analyzing module <output_logic> in library <work>.
+Module <output_logic> is correct for synthesis.
+ 
+Analyzing module <binary_to_segment> in library <work>.
+Module <binary_to_segment> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+INFO:Xst:2679 - Register <memory<0>> in unit <cpu> has a constant value of 0110000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <memory<1>> in unit <cpu> has a constant value of 0100001100001111 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <memory<2>> in unit <cpu> has a constant value of 0110001000000001 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <memory<3>> in unit <cpu> has a constant value of 0100101011110000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <memory<4>> in unit <cpu> has a constant value of 0110000100001111 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <memory<5>> in unit <cpu> has a constant value of 0110000011110000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <memory<6>> in unit <cpu> has a constant value of 1111000000011100 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <memory<7>> in unit <cpu> has a constant value of 1111010000011100 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <memory<8>> in unit <cpu> has a constant value of 1001000000010011 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <memory<9>> in unit <cpu> has a constant value of 0110000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <memory<10>> in unit <cpu> has a constant value of 0110000100000001 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <memory<11>> in unit <cpu> has a constant value of 0100010111111111 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <memory<12>> in unit <cpu> has a constant value of 0100001011111111 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <memory<13>> in unit <cpu> has a constant value of 1111010000011100 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <memory<14>> in unit <cpu> has a constant value of 1111100000011100 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <memory<15>> in unit <cpu> has a constant value of 1001000000010000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <memory<16>> in unit <cpu> has a constant value of 1111010111000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <memory<17>> in unit <cpu> has a constant value of 1111111111000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <memory<18>> in unit <cpu> has a constant value of 1001000000100001 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <memory<19>> in unit <cpu> has a constant value of 1111100000011100 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <memory<20>> in unit <cpu> has a constant value of 1111110000011100 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <memory<21>> in unit <cpu> has a constant value of 1111000101000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <memory<22>> in unit <cpu> has a constant value of 1111101111000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <memory<23>> in unit <cpu> has a constant value of 1111011111000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <memory<24>> in unit <cpu> has a constant value of 1111110000011100 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <memory<25>> in unit <cpu> has a constant value of 1001000000001001 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <memory<26>> in unit <cpu> has a constant value of 1111000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <memory<27>> in unit <cpu> has a constant value of 1111000000011100 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <memory<28>> in unit <cpu> has a constant value of 1001000000011101 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <memory<29>> in unit <cpu> has a constant value of 1001000000011110 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <memory<30>> in unit <cpu> has a constant value of 0110001000000010 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <memory<31>> in unit <cpu> has a constant value of 0100101011111111 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <memory<32>> in unit <cpu> has a constant value of 1001000000101100 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <memory<33>> in unit <cpu> has a constant value of 1111110000011100 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <memory<34>> in unit <cpu> has a constant value of 0110000100000001 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <memory<35>> in unit <cpu> has a constant value of 0100001000100000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <memory<36>> in unit <cpu> has a constant value of 0100001100000011 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <memory<37>> in unit <cpu> has a constant value of 0110000001010101 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <memory<38>> in unit <cpu> has a constant value of 0100000001010101 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <memory<39>> in unit <cpu> has a constant value of 1111000101000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <memory<40>> in unit <cpu> has a constant value of 1111011010000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <memory<41>> in unit <cpu> has a constant value of 1111101111000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <memory<42>> in unit <cpu> has a constant value of 1111110000011100 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <memory<43>> in unit <cpu> has a constant value of 1001000000011010 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <memory<44>> in unit <cpu> has a constant value of 0100101010010010 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <memory<45>> in unit <cpu> has a constant value of 1111100000011100 during circuit operation. The register is replaced by logic.
+
+Synthesizing Unit <clock_generation>.
+    Related source file is "clock_generation.v".
+    Found 1-bit register for signal <clk>.
+    Found 26-bit up counter for signal <counter>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <clock_generation> synthesized.
+
+
+Synthesizing Unit <Controller>.
+    Related source file is "cpu.v".
+WARNING:Xst:737 - Found 1-bit latch for signal <$old_ALU_SEL_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <$old_Jmp_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <$old_LHI_3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <$old_Reg_write_4>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <RI>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <wwd>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+Unit <Controller> synthesized.
+
+
+Synthesizing Unit <Register>.
+    Related source file is "cpu.v".
+    Found 16-bit 4-to-1 multiplexer for signal <data1>.
+    Found 16-bit 4-to-1 multiplexer for signal <data2>.
+    Found 16-bit 4-to-1 multiplexer for signal <data3>.
+    Found 64-bit register for signal <register>.
+    Summary:
+	inferred  64 D-type flip-flop(s).
+	inferred  48 Multiplexer(s).
+Unit <Register> synthesized.
+
+
+Synthesizing Unit <ALU>.
+    Related source file is "cpu.v".
+    Found 16-bit adder for signal <out>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <ALU> synthesized.
+
+
+Synthesizing Unit <sign_extension>.
+    Related source file is "cpu.v".
+Unit <sign_extension> synthesized.
+
+
+Synthesizing Unit <binary_to_segment>.
+    Related source file is "binary_to_segment.v".
+    Found 16x8-bit ROM for signal <segment>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <binary_to_segment> synthesized.
+
+
+Synthesizing Unit <cpu>.
+    Related source file is "cpu.v".
+WARNING:Xst:646 - Signal <pc_bel> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <memory<46:63>> is used but never assigned. This sourceless signal will be automatically connected to value 0000000000000000.
+    Found 64x16-bit ROM for signal <inst>.
+    Found 16-bit register for signal <PC>.
+    Found 16-bit adder for signal <PC_next$addsub0000> created at line 142.
+    Found 16-bit register for signal <Q_data1>.
+    Found 1-bit register for signal <sync_wwd>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred  33 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <cpu> synthesized.
+
+
+Synthesizing Unit <output_logic>.
+    Related source file is "output_logic.v".
+    Found 4-bit register for signal <ANODE>.
+    Found 8-bit register for signal <SEG>.
+    Found 1-of-4 decoder for signal <ANODE$mux0000> created at line 52.
+    Found 16-bit up counter for signal <clkdiv>.
+    Found 8-bit 4-to-1 multiplexer for signal <SEG$mux0000> created at line 52.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  12 D-type flip-flop(s).
+	inferred   8 Multiplexer(s).
+	inferred   1 Decoder(s).
+Unit <output_logic> synthesized.
+
+
+Synthesizing Unit <cpu_top>.
+    Related source file is "cpu_top.v".
+Unit <cpu_top> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 5
+ 16x8-bit ROM                                          : 4
+ 64x16-bit ROM                                         : 1
+# Adders/Subtractors                                   : 2
+ 16-bit adder                                          : 2
+# Counters                                             : 2
+ 16-bit up counter                                     : 1
+ 26-bit up counter                                     : 1
+# Registers                                            : 10
+ 1-bit register                                        : 2
+ 16-bit register                                       : 6
+ 4-bit register                                        : 1
+ 8-bit register                                        : 1
+# Latches                                              : 6
+ 1-bit latch                                           : 6
+# Multiplexers                                         : 4
+ 16-bit 4-to-1 multiplexer                             : 3
+ 8-bit 4-to-1 multiplexer                              : 1
+# Decoders                                             : 1
+ 1-of-4 decoder                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 5
+ 16x8-bit ROM                                          : 4
+ 64x16-bit ROM                                         : 1
+# Adders/Subtractors                                   : 2
+ 16-bit adder                                          : 2
+# Counters                                             : 2
+ 16-bit up counter                                     : 1
+ 26-bit up counter                                     : 1
+# Registers                                            : 110
+ Flip-Flops                                            : 110
+# Latches                                              : 6
+ 1-bit latch                                           : 6
+# Multiplexers                                         : 4
+ 16-bit 4-to-1 multiplexer                             : 3
+ 8-bit 4-to-1 multiplexer                              : 1
+# Decoders                                             : 1
+ 1-of-4 decoder                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2677 - Node <PC_8> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <PC_9> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <PC_10> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <PC_11> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <PC_12> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <PC_13> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <PC_14> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <PC_15> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:1710 - FF/Latch <SEG_0> (without init value) has a constant value of 1 in block <output_logic>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <cpu_top> ...
+
+Optimizing unit <Controller> ...
+
+Optimizing unit <Register> ...
+
+Optimizing unit <cpu> ...
+
+Optimizing unit <output_logic> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block cpu_top, actual ratio is 9.
+FlipFlop cpu/PC_0 has been replicated 2 time(s)
+FlipFlop cpu/PC_1 has been replicated 2 time(s)
+FlipFlop cpu/PC_2 has been replicated 2 time(s)
+FlipFlop cpu/PC_3 has been replicated 2 time(s)
+FlipFlop cpu/PC_4 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 152
+ Flip-Flops                                            : 152
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : cpu_top.ngr
+Top Level Output File Name         : cpu_top
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 27
+
+Cell Usage :
+# BELS                             : 564
+#      GND                         : 1
+#      INV                         : 6
+#      LUT1                        : 47
+#      LUT2                        : 13
+#      LUT3                        : 129
+#      LUT3_D                      : 2
+#      LUT4                        : 127
+#      MUXCY                       : 69
+#      MUXF5                       : 87
+#      MUXF6                       : 16
+#      VCC                         : 1
+#      XORCY                       : 66
+# FlipFlops/Latches                : 158
+#      FD                          : 25
+#      FDCE                        : 64
+#      FDE                         : 16
+#      FDR                         : 26
+#      FDRE                        : 1
+#      FDS                         : 3
+#      FDSE                        : 17
+#      LD                          : 6
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 26
+#      IBUF                        : 6
+#      OBUF                        : 20
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s200ft256-4 
+
+ Number of Slices:                      187  out of   1920     9%  
+ Number of Slice Flip Flops:            158  out of   3840     4%  
+ Number of 4 input LUTs:                324  out of   3840     8%  
+ Number of IOs:                          27
+ Number of bonded IOBs:                  27  out of    173    15%  
+ Number of GCLKs:                         2  out of      8    25%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+---------------------------------------------------------------------+-----------------------------------+-------+
+Clock Signal                                                         | Clock buffer(FF name)             | Load  |
+---------------------------------------------------------------------+-----------------------------------+-------+
+MCLK                                                                 | BUFGP                             | 54    |
+clock_generator/clk1                                                 | BUFG                              | 98    |
+cpu/cont/RI_not0001(cpu/cont/RI_not000132_f5:O)                      | NONE(*)(cpu/cont/wwd)             | 5     |
+cpu/cont/old_Reg_write_4_not0001(cpu/cont/old_Reg_write_4_not00011:O)| NONE(*)(cpu/cont/_old_Reg_write_4)| 1     |
+---------------------------------------------------------------------+-----------------------------------+-------+
+(*) These 2 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+reset_cpu                          | IBUF                   | 64    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 11.524ns (Maximum Frequency: 86.775MHz)
+   Minimum input arrival time before clock: 9.537ns
+   Maximum output required time after clock: 8.246ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'MCLK'
+  Clock period: 8.056ns (frequency: 124.135MHz)
+  Total number of paths / destination ports: 1219 / 84
+-------------------------------------------------------------------------
+Delay:               8.056ns (Levels of Logic = 9)
+  Source:            clock_generator/counter_5 (FF)
+  Destination:       clock_generator/counter_0 (FF)
+  Source Clock:      MCLK rising
+  Destination Clock: MCLK rising
+
+  Data Path: clock_generator/counter_5 to clock_generator/counter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.720   1.216  clock_generator/counter_5 (clock_generator/counter_5)
+     LUT2:I0->O            1   0.551   0.000  clock_generator/clk_cmp_eq0000_wg_lut<0> (clock_generator/clk_cmp_eq0000_wg_lut<0>)
+     MUXCY:S->O            1   0.500   0.000  clock_generator/clk_cmp_eq0000_wg_cy<0> (clock_generator/clk_cmp_eq0000_wg_cy<0>)
+     MUXCY:CI->O           1   0.064   0.000  clock_generator/clk_cmp_eq0000_wg_cy<1> (clock_generator/clk_cmp_eq0000_wg_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  clock_generator/clk_cmp_eq0000_wg_cy<2> (clock_generator/clk_cmp_eq0000_wg_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  clock_generator/clk_cmp_eq0000_wg_cy<3> (clock_generator/clk_cmp_eq0000_wg_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  clock_generator/clk_cmp_eq0000_wg_cy<4> (clock_generator/clk_cmp_eq0000_wg_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  clock_generator/clk_cmp_eq0000_wg_cy<5> (clock_generator/clk_cmp_eq0000_wg_cy<5>)
+     MUXCY:CI->O           2   0.281   1.072  clock_generator/clk_cmp_eq0000_wg_cy<6> (clock_generator/clk_cmp_eq0000)
+     LUT2:I1->O           26   0.551   1.819  clock_generator/counter_or00001 (clock_generator/counter_or0000)
+     FDR:R                     1.026          clock_generator/counter_0
+    ----------------------------------------
+    Total                      8.056ns (3.949ns logic, 4.107ns route)
+                                       (49.0% logic, 51.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock_generator/clk1'
+  Clock period: 11.524ns (frequency: 86.775MHz)
+  Total number of paths / destination ports: 90412 / 161
+-------------------------------------------------------------------------
+Delay:               11.524ns (Levels of Logic = 23)
+  Source:            cpu/PC_0_1 (FF)
+  Destination:       cpu/register/register_0_15 (FF)
+  Source Clock:      clock_generator/clk1 rising
+  Destination Clock: clock_generator/clk1 rising
+
+  Data Path: cpu/PC_0_1 to cpu/register/register_0_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDSE:C->Q             6   0.720   1.342  cpu/PC_0_1 (cpu/PC_0_1)
+     LUT4:I0->O            1   0.551   0.000  cpu/Mrom_inst102 (cpu/Mrom_inst102)
+     MUXF5:I0->O           1   0.360   0.000  cpu/Mrom_inst10_f5_0 (cpu/Mrom_inst10_f51)
+     MUXF6:I0->O          32   0.342   1.921  cpu/Mrom_inst10_f6 (cpu/Mrom_inst10_f6)
+     LUT3:I2->O            1   0.551   0.000  cpu/register/Mmux_data1_4 (cpu/register/Mmux_data1_4)
+     MUXF5:I0->O           2   0.360   0.903  cpu/register/Mmux_data1_2_f5 (cpu/data1<0>)
+     LUT4:I3->O            1   0.551   0.000  cpu/alu/Madd_out_lut<0> (cpu/alu/Madd_out_lut<0>)
+     MUXCY:S->O            1   0.500   0.000  cpu/alu/Madd_out_cy<0> (cpu/alu/Madd_out_cy<0>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/alu/Madd_out_cy<1> (cpu/alu/Madd_out_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/alu/Madd_out_cy<2> (cpu/alu/Madd_out_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/alu/Madd_out_cy<3> (cpu/alu/Madd_out_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/alu/Madd_out_cy<4> (cpu/alu/Madd_out_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/alu/Madd_out_cy<5> (cpu/alu/Madd_out_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/alu/Madd_out_cy<6> (cpu/alu/Madd_out_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/alu/Madd_out_cy<7> (cpu/alu/Madd_out_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/alu/Madd_out_cy<8> (cpu/alu/Madd_out_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/alu/Madd_out_cy<9> (cpu/alu/Madd_out_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/alu/Madd_out_cy<10> (cpu/alu/Madd_out_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/alu/Madd_out_cy<11> (cpu/alu/Madd_out_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/alu/Madd_out_cy<12> (cpu/alu/Madd_out_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/alu/Madd_out_cy<13> (cpu/alu/Madd_out_cy<13>)
+     MUXCY:CI->O           0   0.064   0.000  cpu/alu/Madd_out_cy<14> (cpu/alu/Madd_out_cy<14>)
+     XORCY:CI->O           1   0.904   0.869  cpu/alu/Madd_out_xor<15> (cpu/alu_out<15>)
+     LUT3:I2->O            4   0.551   0.000  cpu/wdata<15>1 (cpu/wdata<15>)
+     FDCE:D                    0.203          cpu/register/register_0_15
+    ----------------------------------------
+    Total                     11.524ns (6.489ns logic, 5.035ns route)
+                                       (56.3% logic, 43.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'MCLK'
+  Total number of paths / destination ports: 475 / 34
+-------------------------------------------------------------------------
+Offset:              9.537ns (Levels of Logic = 7)
+  Source:            register_selection<0> (PAD)
+  Destination:       out/SEG_7 (FF)
+  Destination Clock: MCLK rising
+
+  Data Path: register_selection<0> to out/SEG_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            32   0.821   2.192  register_selection_0_IBUF (register_selection_0_IBUF)
+     LUT3:I0->O            1   0.551   0.000  cpu/register/Mmux_data3_31 (cpu/register/Mmux_data3_31)
+     MUXF5:I1->O           1   0.360   0.996  cpu/register/Mmux_data3_2_f5_0 (cpu/data3<10>)
+     LUT4:I1->O            7   0.551   1.405  cpu/output_port<10>1 (output_port<10>)
+     LUT4:I0->O            1   0.551   0.996  out/seg3/Mrom_segment61 (out/SEG3<6>)
+     LUT3:I1->O            1   0.551   0.000  out/Mmux_SEG_mux0000_35 (out/Mmux_SEG_mux0000_35)
+     MUXF5:I1->O           1   0.360   0.000  out/Mmux_SEG_mux0000_2_f5_4 (out/SEG_mux0000<6>)
+     FD:D                      0.203          out/SEG_6
+    ----------------------------------------
+    Total                      9.537ns (3.948ns logic, 5.589ns route)
+                                       (41.4% logic, 58.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock_generator/clk1'
+  Total number of paths / destination ports: 98 / 98
+-------------------------------------------------------------------------
+Offset:              5.150ns (Levels of Logic = 2)
+  Source:            cpu_enable (PAD)
+  Destination:       cpu/register/register_0_0 (FF)
+  Destination Clock: clock_generator/clk1 rising
+
+  Data Path: cpu_enable to cpu/register/register_0_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            22   0.821   1.939  cpu_enable_IBUF (cpu_enable_IBUF)
+     LUT4:I0->O           16   0.551   1.237  cpu/register/register_1_not00011 (cpu/register/register_1_not0001)
+     FDCE:CE                   0.602          cpu/register/register_1_0
+    ----------------------------------------
+    Total                      5.150ns (1.974ns logic, 3.176ns route)
+                                       (38.3% logic, 61.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'MCLK'
+  Total number of paths / destination ports: 11 / 11
+-------------------------------------------------------------------------
+Offset:              7.165ns (Levels of Logic = 1)
+  Source:            out/ANODE_3 (FF)
+  Destination:       ANODE<3> (PAD)
+  Source Clock:      MCLK rising
+
+  Data Path: out/ANODE_3 to ANODE<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.720   0.801  out/ANODE_3 (out/ANODE_3)
+     OBUF:I->O                 5.644          ANODE_3_OBUF (ANODE<3>)
+    ----------------------------------------
+    Total                      7.165ns (6.364ns logic, 0.801ns route)
+                                       (88.8% logic, 11.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock_generator/clk1'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              8.246ns (Levels of Logic = 1)
+  Source:            cpu/PC_3 (FF)
+  Destination:       LED<3> (PAD)
+  Source Clock:      clock_generator/clk1 rising
+
+  Data Path: cpu/PC_3 to LED<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDSE:C->Q            37   0.720   1.882  cpu/PC_3 (cpu/PC_3)
+     OBUF:I->O                 5.644          LED_3_OBUF (LED<3>)
+    ----------------------------------------
+    Total                      8.246ns (6.364ns logic, 1.882ns route)
+                                       (77.2% logic, 22.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.64 secs
+ 
+--> 
+
+Total memory usage is 260268 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   34 (   0 filtered)
+Number of infos    :   54 (   0 filtered)
+

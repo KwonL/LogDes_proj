@@ -1,0 +1,4 @@
+vhdtdtfi -lib work C:/Kwon_proj/clock_generation.v -lang verilog -prj Kwon_proj -o clock_generation.spl -module clock_generation -template C:/Xilinx/14.3/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3 clock_generation.spl C:/Kwon_proj/clock_generation.sym 
+vhdtdtfi -lib work C:/Kwon_proj/clock_generation.v -lang verilog -prj Kwon_proj -o clock_generation.spl -module clock_generation -template C:/Xilinx/14.3/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3 clock_generation.spl C:/Kwon_proj/clock_generation.sym 

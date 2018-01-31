@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# PlanAhead v14.3 (64-bit)
+# Build 209282 by xbuild on Thu Oct 18 20:50:53 MDT 2012
+# Start of session at: Tue Dec 19 15:50:23 2017
+# Process ID: 5684
+# Log file: C:/Kwon_proj/planAhead_run_1/planAhead.log
+# Journal file: C:/Kwon_proj/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/Kwon_proj/pa.fromNetlist.tcl

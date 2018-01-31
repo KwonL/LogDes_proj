@@ -1,0 +1,5 @@
+verilog work "binary_to_segment.v"
+verilog work "output_logic.v"
+verilog work "cpu.v"
+verilog work "clock_generation.v"
+verilog work "cpu_top.v"

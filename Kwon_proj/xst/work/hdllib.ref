@@ -1,0 +1,10 @@
+MO cpu_top NULL cpu_top.v vlg22/cpu__top.bin 1513676424
+MO Register NULL cpu.v vlg09/_register.bin 1513676424
+MO sign_extension NULL cpu.v vlg75/sign__extension.bin 1513676424
+MO cpu NULL cpu.v vlg50/cpu.bin 1513676424
+MO clock_generation NULL clock_generation.v vlg3B/clock__generation.bin 1513676424
+MO binary_to_segment NULL binary_to_segment.v vlg59/binary__to__segment.bin 1513676424
+MO Controller NULL cpu.v vlg34/_controller.bin 1513676424
+MO ALU NULL cpu.v vlg2A/_a_l_u.bin 1513676424
+MO Path NULL cpu.v vlg35/_path.bin 1513673290
+MO output_logic NULL output_logic.v vlg02/output__logic.bin 1513676424

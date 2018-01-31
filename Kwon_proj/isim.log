@@ -1,0 +1,524 @@
+ISim log file
+Running: C:\Kwon_proj\tb_cpu_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Kwon_proj/tb_cpu_isim_beh.wdb 
+ISim P.40xd (signature 0x7708f090)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+instruction : 0110000000000000
+opcode : 0110
+ALU_SEL, JMP, LHI, REG_W : 0 0 1 1
+write data : xxxxxxxxxxxxxxxx, write reg : 00, wen : 0
+data1 : 0000000000000000, data2 : 0000000000000000, reg1 : 00, reg2 : 00
+ISim P.40xd (signature 0x7708f090)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+instruction : 0110000000000000
+opcode : 0110
+ALU_SEL, JMP, LHI, REG_W : 0 0 1 1
+write data : xxxxxxxxxxxxxxxx, write reg : 00, wen : 0
+data1 : 0000000000000000, data2 : 0000000000000000, reg1 : 00, reg2 : 00
+# run 3.00us
+instruction : 0100001100001111
+opcode : 0100
+ALU_SEL, JMP, LHI, REG_W : 1 0 0 1
+data1 : 0000000000000000, data2 : 0000000000001111, reg1 : 00, reg2 : 11
+write data : 0000000000001111, write reg : 11, wen : 1
+instruction : 0110001000000001
+opcode : 0110
+ALU_SEL, JMP, LHI, REG_W : 0 0 1 1
+write data : 0000000000001111, write reg : 10, wen : 1
+data1 : 0000000000000000, data2 : 0000000000000000, reg1 : 00, reg2 : 10
+data1 : 0000000000000000, data2 : 0000000100000000, reg1 : 00, reg2 : 10
+write data : 0000000100000000, write reg : 10, wen : 1
+instruction : 0100101011110000
+opcode : 0100
+ALU_SEL, JMP, LHI, REG_W : 1 0 0 1
+data1 : 0000000100000000, data2 : 0000000100000000, reg1 : 10, reg2 : 10
+data1 : 0000000011110000, data2 : 0000000011110000, reg1 : 10, reg2 : 10
+write data : 0000000011110000, write reg : 10, wen : 1
+instruction : 0110000100001111
+opcode : 0110
+ALU_SEL, JMP, LHI, REG_W : 0 0 1 1
+write data : 0000000011100000, write reg : 01, wen : 1
+data1 : 0000000000000000, data2 : 0000000000000000, reg1 : 00, reg2 : 01
+data1 : 0000000000000000, data2 : 0000111100000000, reg1 : 00, reg2 : 01
+write data : 0000111100000000, write reg : 01, wen : 1
+instruction : 0110000011110000
+opcode : 0110
+ALU_SEL, JMP, LHI, REG_W : 0 0 1 1
+write data : 1111000000000000, write reg : 00, wen : 1
+data1 : 0000000000000000, data2 : 0000000000000000, reg1 : 00, reg2 : 00
+data1 : 1111000000000000, data2 : 1111000000000000, reg1 : 00, reg2 : 00
+write data : 1111000000000000, write reg : 00, wen : 1
+instruction : 1111000000011100
+opcode : 1111
+ALU_SEL, JMP, LHI, REG_W : 0 0 0 0
+instruction : 1111010000011100
+data1 : 0000111100000000, data2 : 1111000000000000, reg1 : 01, reg2 : 00
+instruction : 1001000000010011
+opcode : 1001
+ALU_SEL, JMP, LHI, REG_W : 0 1 0 0
+data1 : 1111000000000000, data2 : 1111000000000000, reg1 : 00, reg2 : 00
+instruction : 1111100000011100
+opcode : 1111
+ALU_SEL, JMP, LHI, REG_W : 0 0 0 0
+data1 : 0000000011110000, data2 : 1111000000000000, reg1 : 10, reg2 : 00
+instruction : 1111110000011100
+data1 : 0000000000001111, data2 : 1111000000000000, reg1 : 11, reg2 : 00
+instruction : 1111000101000000
+opcode : 1111
+ALU_SEL, JMP, LHI, REG_W : 0 0 0 1
+write data : 1111000000001111, write reg : 01, wen : 0
+data1 : 1111000000000000, data2 : 0000111100000000, reg1 : 00, reg2 : 01
+data1 : 1111000000000000, data2 : 1111111100000000, reg1 : 00, reg2 : 01
+write data : 1111111100000000, write reg : 01, wen : 1
+instruction : 1111101111000000
+write data : 1110111100000000, write reg : 11, wen : 1
+data1 : 0000000011110000, data2 : 0000000000001111, reg1 : 10, reg2 : 11
+data1 : 0000000011110000, data2 : 0000000011111111, reg1 : 10, reg2 : 11
+write data : 0000000011111111, write reg : 11, wen : 1
+instruction : 1111011111000000
+data1 : 1111111100000000, data2 : 0000000011111111, reg1 : 01, reg2 : 11
+data1 : 1111111100000000, data2 : 1111111111111111, reg1 : 01, reg2 : 11
+write data : 1111111111111111, write reg : 11, wen : 1
+instruction : 1111110000011100
+opcode : 1111
+ALU_SEL, JMP, LHI, REG_W : 0 0 0 0
+write data : 1111111011111111, write reg : 00, wen : 1
+data1 : 1111111111111111, data2 : 1111000000000000, reg1 : 11, reg2 : 00
+instruction : 1001000000001001
+opcode : 1001
+ALU_SEL, JMP, LHI, REG_W : 0 1 0 0
+data1 : 1111000000000000, data2 : 1111000000000000, reg1 : 00, reg2 : 00
+instruction : 0110000000000000
+opcode : 0110
+ALU_SEL, JMP, LHI, REG_W : 0 0 1 1
+data1 : 0000000000000000, data2 : 0000000000000000, reg1 : 00, reg2 : 00
+write data : 0000000000000000, write reg : 00, wen : 1
+instruction : 0110000100000001
+opcode : 0110
+ALU_SEL, JMP, LHI, REG_W : 0 0 1 1
+write data : 0000000100000000, write reg : 01, wen : 1
+data1 : 0000000000000000, data2 : 1111111100000000, reg1 : 00, reg2 : 01
+data1 : 0000000000000000, data2 : 0000000100000000, reg1 : 00, reg2 : 01
+write data : 0000000100000000, write reg : 01, wen : 1
+instruction : 0100010111111111
+opcode : 0100
+ALU_SEL, JMP, LHI, REG_W : 1 0 0 1
+data1 : 0000000100000000, data2 : 0000000100000000, reg1 : 01, reg2 : 01
+data1 : 0000000011111111, data2 : 0000000011111111, reg1 : 01, reg2 : 01
+write data : 0000000011111111, write reg : 01, wen : 1
+instruction : 0100001011111111
+write data : 0000000011111110, write reg : 10, wen : 1
+data1 : 0000000000000000, data2 : 0000000011110000, reg1 : 00, reg2 : 10
+data1 : 0000000000000000, data2 : 1111111111111111, reg1 : 00, reg2 : 10
+write data : 1111111111111111, write reg : 10, wen : 1
+instruction : 1111010000011100
+opcode : 1111
+ALU_SEL, JMP, LHI, REG_W : 0 0 0 0
+write data : 1111111111111111, write reg : 00, wen : 1
+data1 : 0000000011111111, data2 : 0000000000000000, reg1 : 01, reg2 : 00
+instruction : 1111100000011100
+data1 : 1111111111111111, data2 : 0000000000000000, reg1 : 10, reg2 : 00
+instruction : 1001000000010000
+opcode : 1001
+ALU_SEL, JMP, LHI, REG_W : 0 1 0 0
+data1 : 0000000000000000, data2 : 0000000000000000, reg1 : 00, reg2 : 00
+instruction : 1111010111000000
+opcode : 1111
+ALU_SEL, JMP, LHI, REG_W : 0 0 0 1
+write data : 0000000000000000, write reg : 01, wen : 0
+data1 : 0000000011111111, data2 : 0000000011111111, reg1 : 01, reg2 : 01
+write data : 0000000111111110, write reg : 11, wen : 1
+write data : 0000000111111110, write reg : 11, wen : 1
+instruction : 1111111111000000
+data1 : 0000000111111110, data2 : 0000000111111110, reg1 : 11, reg2 : 11
+data1 : 0000001111111100, data2 : 0000001111111100, reg1 : 11, reg2 : 11
+write data : 0000001111111100, write reg : 11, wen : 1
+instruction : 1001000000100001
+opcode : 1001
+ALU_SEL, JMP, LHI, REG_W : 0 1 0 0
+write data : 0000011111111000, write reg : 00, wen : 1
+data1 : 0000000000000000, data2 : 0000000000000000, reg1 : 00, reg2 : 00
+instruction : 1111110000011100
+opcode : 1111
+ALU_SEL, JMP, LHI, REG_W : 0 0 0 0
+data1 : 0000001111111100, data2 : 0000000000000000, reg1 : 11, reg2 : 00
+instruction : 0110000100000001
+opcode : 0110
+ALU_SEL, JMP, LHI, REG_W : 0 0 1 1
+data1 : 0000000000000000, data2 : 0000000011111111, reg1 : 00, reg2 : 01
+write data : 0000000100000000, write reg : 01, wen : 1
+data1 : 0000000000000000, data2 : 0000000100000000, reg1 : 00, reg2 : 01
+write data : 0000000100000000, write reg : 01, wen : 1
+instruction : 0100001000100000
+opcode : 0100
+ALU_SEL, JMP, LHI, REG_W : 1 0 0 1
+write data : 0010000000000000, write reg : 10, wen : 1
+data1 : 0000000000000000, data2 : 1111111111111111, reg1 : 00, reg2 : 10
+data1 : 0000000000000000, data2 : 0000000000100000, reg1 : 00, reg2 : 10
+write data : 0000000000100000, write reg : 10, wen : 1
+instruction : 0100001100000011
+opcode : 0100
+ALU_SEL, JMP, LHI, REG_W : 1 0 0 1
+write data : 0000000000100000, write reg : 11, wen : 1
+data1 : 0000000000000000, data2 : 0000001111111100, reg1 : 00, reg2 : 11
+data1 : 0000000000000000, data2 : 0000000000000011, reg1 : 00, reg2 : 11
+write data : 0000000000000011, write reg : 11, wen : 1
+instruction : 0110000001010101
+opcode : 0110
+ALU_SEL, JMP, LHI, REG_W : 0 0 1 1
+write data : 0000000000000011, write reg : 00, wen : 1
+data1 : 0000000000000000, data2 : 0000000000000000, reg1 : 00, reg2 : 00
+ISim P.40xd (signature 0x7708f090)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+instruction : 0110000000000000
+opcode : 0110
+ALU_SEL, JMP, LHI, REG_W : 0 0 1 1
+write data : xxxxxxxxxxxxxxxx, write reg : 00, wen : 0
+data1 : 0000000000000000, data2 : 0000000000000000, reg1 : 00, reg2 : 00
+# run 3.00us
+instruction : 0100001100001111
+opcode : 0100
+ALU_SEL, JMP, LHI, REG_W : 1 0 0 1
+data1 : 0000000000000000, data2 : 0000000000001111, reg1 : 00, reg2 : 11
+write data : 0000000000001111, write reg : 11, wen : 1
+instruction : 0110001000000001
+opcode : 0110
+ALU_SEL, JMP, LHI, REG_W : 0 0 1 1
+write data : 0000000000001111, write reg : 10, wen : 1
+data1 : 0000000000000000, data2 : 0000000000000000, reg1 : 00, reg2 : 10
+data1 : 0000000000000000, data2 : 0000000100000000, reg1 : 00, reg2 : 10
+write data : 0000000100000000, write reg : 10, wen : 1
+instruction : 0100101011110000
+opcode : 0100
+ALU_SEL, JMP, LHI, REG_W : 1 0 0 1
+data1 : 0000000100000000, data2 : 0000000100000000, reg1 : 10, reg2 : 10
+data1 : 0000000011110000, data2 : 0000000011110000, reg1 : 10, reg2 : 10
+write data : 0000000011110000, write reg : 10, wen : 1
+instruction : 0110000100001111
+opcode : 0110
+ALU_SEL, JMP, LHI, REG_W : 0 0 1 1
+write data : 0000000011100000, write reg : 01, wen : 1
+data1 : 0000000000000000, data2 : 0000000000000000, reg1 : 00, reg2 : 01
+data1 : 0000000000000000, data2 : 0000111100000000, reg1 : 00, reg2 : 01
+write data : 0000111100000000, write reg : 01, wen : 1
+instruction : 0110000011110000
+opcode : 0110
+ALU_SEL, JMP, LHI, REG_W : 0 0 1 1
+write data : 1111000000000000, write reg : 00, wen : 1
+data1 : 0000000000000000, data2 : 0000000000000000, reg1 : 00, reg2 : 00
+data1 : 1111000000000000, data2 : 1111000000000000, reg1 : 00, reg2 : 00
+write data : 1111000000000000, write reg : 00, wen : 1
+instruction : 1111000000011100
+opcode : 1111
+ALU_SEL, JMP, LHI, REG_W : 0 0 0 0
+instruction : 1111010000011100
+data1 : 0000111100000000, data2 : 1111000000000000, reg1 : 01, reg2 : 00
+instruction : 1001000000010011
+opcode : 1001
+ALU_SEL, JMP, LHI, REG_W : 0 1 0 0
+data1 : 1111000000000000, data2 : 1111000000000000, reg1 : 00, reg2 : 00
+instruction : 1111100000011100
+opcode : 1111
+ALU_SEL, JMP, LHI, REG_W : 0 0 0 0
+data1 : 0000000011110000, data2 : 1111000000000000, reg1 : 10, reg2 : 00
+instruction : 1111110000011100
+data1 : 0000000000001111, data2 : 1111000000000000, reg1 : 11, reg2 : 00
+instruction : 1111000101000000
+opcode : 1111
+ALU_SEL, JMP, LHI, REG_W : 0 0 0 1
+write data : 1111000000001111, write reg : 01, wen : 0
+data1 : 1111000000000000, data2 : 0000111100000000, reg1 : 00, reg2 : 01
+data1 : 1111000000000000, data2 : 1111111100000000, reg1 : 00, reg2 : 01
+write data : 1111111100000000, write reg : 01, wen : 1
+instruction : 1111101111000000
+write data : 1110111100000000, write reg : 11, wen : 1
+data1 : 0000000011110000, data2 : 0000000000001111, reg1 : 10, reg2 : 11
+data1 : 0000000011110000, data2 : 0000000011111111, reg1 : 10, reg2 : 11
+write data : 0000000011111111, write reg : 11, wen : 1
+instruction : 1111011111000000
+data1 : 1111111100000000, data2 : 0000000011111111, reg1 : 01, reg2 : 11
+data1 : 1111111100000000, data2 : 1111111111111111, reg1 : 01, reg2 : 11
+write data : 1111111111111111, write reg : 11, wen : 1
+instruction : 1111110000011100
+opcode : 1111
+ALU_SEL, JMP, LHI, REG_W : 0 0 0 0
+write data : 1111111011111111, write reg : 00, wen : 1
+data1 : 1111111111111111, data2 : 1111000000000000, reg1 : 11, reg2 : 00
+instruction : 1001000000001001
+opcode : 1001
+ALU_SEL, JMP, LHI, REG_W : 0 1 0 0
+data1 : 1111000000000000, data2 : 1111000000000000, reg1 : 00, reg2 : 00
+instruction : 0110000000000000
+opcode : 0110
+ALU_SEL, JMP, LHI, REG_W : 0 0 1 1
+data1 : 0000000000000000, data2 : 0000000000000000, reg1 : 00, reg2 : 00
+write data : 0000000000000000, write reg : 00, wen : 1
+instruction : 0110000100000001
+opcode : 0110
+ALU_SEL, JMP, LHI, REG_W : 0 0 1 1
+write data : 0000000100000000, write reg : 01, wen : 1
+data1 : 0000000000000000, data2 : 1111111100000000, reg1 : 00, reg2 : 01
+data1 : 0000000000000000, data2 : 0000000100000000, reg1 : 00, reg2 : 01
+write data : 0000000100000000, write reg : 01, wen : 1
+instruction : 0100010111111111
+opcode : 0100
+ALU_SEL, JMP, LHI, REG_W : 1 0 0 1
+data1 : 0000000100000000, data2 : 0000000100000000, reg1 : 01, reg2 : 01
+data1 : 0000000011111111, data2 : 0000000011111111, reg1 : 01, reg2 : 01
+write data : 0000000011111111, write reg : 01, wen : 1
+instruction : 0100001011111111
+write data : 0000000011111110, write reg : 10, wen : 1
+data1 : 0000000000000000, data2 : 0000000011110000, reg1 : 00, reg2 : 10
+data1 : 0000000000000000, data2 : 1111111111111111, reg1 : 00, reg2 : 10
+write data : 1111111111111111, write reg : 10, wen : 1
+instruction : 1111010000011100
+opcode : 1111
+ALU_SEL, JMP, LHI, REG_W : 0 0 0 0
+write data : 1111111111111111, write reg : 00, wen : 1
+data1 : 0000000011111111, data2 : 0000000000000000, reg1 : 01, reg2 : 00
+instruction : 1111100000011100
+data1 : 1111111111111111, data2 : 0000000000000000, reg1 : 10, reg2 : 00
+instruction : 1001000000010000
+opcode : 1001
+ALU_SEL, JMP, LHI, REG_W : 0 1 0 0
+data1 : 0000000000000000, data2 : 0000000000000000, reg1 : 00, reg2 : 00
+instruction : 1111010111000000
+opcode : 1111
+ALU_SEL, JMP, LHI, REG_W : 0 0 0 1
+write data : 0000000000000000, write reg : 01, wen : 0
+data1 : 0000000011111111, data2 : 0000000011111111, reg1 : 01, reg2 : 01
+write data : 0000000111111110, write reg : 11, wen : 1
+write data : 0000000111111110, write reg : 11, wen : 1
+instruction : 1111111111000000
+data1 : 0000000111111110, data2 : 0000000111111110, reg1 : 11, reg2 : 11
+data1 : 0000001111111100, data2 : 0000001111111100, reg1 : 11, reg2 : 11
+write data : 0000001111111100, write reg : 11, wen : 1
+instruction : 1001000000100001
+opcode : 1001
+ALU_SEL, JMP, LHI, REG_W : 0 1 0 0
+write data : 0000011111111000, write reg : 00, wen : 1
+data1 : 0000000000000000, data2 : 0000000000000000, reg1 : 00, reg2 : 00
+instruction : 1111110000011100
+opcode : 1111
+ALU_SEL, JMP, LHI, REG_W : 0 0 0 0
+data1 : 0000001111111100, data2 : 0000000000000000, reg1 : 11, reg2 : 00
+instruction : 0110000100000001
+opcode : 0110
+ALU_SEL, JMP, LHI, REG_W : 0 0 1 1
+data1 : 0000000000000000, data2 : 0000000011111111, reg1 : 00, reg2 : 01
+write data : 0000000100000000, write reg : 01, wen : 1
+data1 : 0000000000000000, data2 : 0000000100000000, reg1 : 00, reg2 : 01
+write data : 0000000100000000, write reg : 01, wen : 1
+instruction : 0100001000100000
+opcode : 0100
+ALU_SEL, JMP, LHI, REG_W : 1 0 0 1
+write data : 0010000000000000, write reg : 10, wen : 1
+data1 : 0000000000000000, data2 : 1111111111111111, reg1 : 00, reg2 : 10
+data1 : 0000000000000000, data2 : 0000000000100000, reg1 : 00, reg2 : 10
+write data : 0000000000100000, write reg : 10, wen : 1
+instruction : 0100001100000011
+opcode : 0100
+ALU_SEL, JMP, LHI, REG_W : 1 0 0 1
+write data : 0000000000100000, write reg : 11, wen : 1
+data1 : 0000000000000000, data2 : 0000001111111100, reg1 : 00, reg2 : 11
+data1 : 0000000000000000, data2 : 0000000000000011, reg1 : 00, reg2 : 11
+write data : 0000000000000011, write reg : 11, wen : 1
+instruction : 0110000001010101
+opcode : 0110
+ALU_SEL, JMP, LHI, REG_W : 0 0 1 1
+write data : 0000000000000011, write reg : 00, wen : 1
+data1 : 0000000000000000, data2 : 0000000000000000, reg1 : 00, reg2 : 00
+ISim P.40xd (signature 0x7708f090)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+instruction : 0110000000000000
+opcode : 0110
+ALU_SEL, JMP, LHI, REG_W : 0 0 1 1
+write data : xxxxxxxxxxxxxxxx, write reg : 00, wen : 0
+data1 : 0000000000000000, data2 : 0000000000000000, reg1 : 00, reg2 : 00
+# run 3.00us
+instruction : 0100001100001111
+opcode : 0100
+ALU_SEL, JMP, LHI, REG_W : 1 0 0 1
+data1 : 0000000000000000, data2 : 0000000000001111, reg1 : 00, reg2 : 11
+write data : 0000000000001111, write reg : 11, wen : 1
+instruction : 0110001000000001
+opcode : 0110
+ALU_SEL, JMP, LHI, REG_W : 0 0 1 1
+write data : 0000000000001111, write reg : 10, wen : 1
+data1 : 0000000000000000, data2 : 0000000000000000, reg1 : 00, reg2 : 10
+data1 : 0000000000000000, data2 : 0000000100000000, reg1 : 00, reg2 : 10
+write data : 0000000100000000, write reg : 10, wen : 1
+instruction : 0100101011110000
+opcode : 0100
+ALU_SEL, JMP, LHI, REG_W : 1 0 0 1
+data1 : 0000000100000000, data2 : 0000000100000000, reg1 : 10, reg2 : 10
+data1 : 0000000011110000, data2 : 0000000011110000, reg1 : 10, reg2 : 10
+write data : 0000000011110000, write reg : 10, wen : 1
+instruction : 0110000100001111
+opcode : 0110
+ALU_SEL, JMP, LHI, REG_W : 0 0 1 1
+write data : 0000000011100000, write reg : 01, wen : 1
+data1 : 0000000000000000, data2 : 0000000000000000, reg1 : 00, reg2 : 01
+data1 : 0000000000000000, data2 : 0000111100000000, reg1 : 00, reg2 : 01
+write data : 0000111100000000, write reg : 01, wen : 1
+instruction : 0110000011110000
+opcode : 0110
+ALU_SEL, JMP, LHI, REG_W : 0 0 1 1
+write data : 1111000000000000, write reg : 00, wen : 1
+data1 : 0000000000000000, data2 : 0000000000000000, reg1 : 00, reg2 : 00
+data1 : 1111000000000000, data2 : 1111000000000000, reg1 : 00, reg2 : 00
+write data : 1111000000000000, write reg : 00, wen : 1
+instruction : 1111000000011100
+opcode : 1111
+ALU_SEL, JMP, LHI, REG_W : 0 0 0 0
+instruction : 1111010000011100
+data1 : 0000111100000000, data2 : 1111000000000000, reg1 : 01, reg2 : 00
+instruction : 1001000000010011
+opcode : 1001
+ALU_SEL, JMP, LHI, REG_W : 0 1 0 0
+data1 : 1111000000000000, data2 : 1111000000000000, reg1 : 00, reg2 : 00
+instruction : 1111100000011100
+opcode : 1111
+ALU_SEL, JMP, LHI, REG_W : 0 0 0 0
+data1 : 0000000011110000, data2 : 1111000000000000, reg1 : 10, reg2 : 00
+instruction : 1111110000011100
+data1 : 0000000000001111, data2 : 1111000000000000, reg1 : 11, reg2 : 00
+instruction : 1111000101000000
+opcode : 1111
+ALU_SEL, JMP, LHI, REG_W : 0 0 0 1
+write data : 1111000000001111, write reg : 01, wen : 0
+data1 : 1111000000000000, data2 : 0000111100000000, reg1 : 00, reg2 : 01
+data1 : 1111000000000000, data2 : 1111111100000000, reg1 : 00, reg2 : 01
+write data : 1111111100000000, write reg : 01, wen : 1
+instruction : 1111101111000000
+write data : 1110111100000000, write reg : 11, wen : 1
+data1 : 0000000011110000, data2 : 0000000000001111, reg1 : 10, reg2 : 11
+data1 : 0000000011110000, data2 : 0000000011111111, reg1 : 10, reg2 : 11
+write data : 0000000011111111, write reg : 11, wen : 1
+instruction : 1111011111000000
+data1 : 1111111100000000, data2 : 0000000011111111, reg1 : 01, reg2 : 11
+data1 : 1111111100000000, data2 : 1111111111111111, reg1 : 01, reg2 : 11
+write data : 1111111111111111, write reg : 11, wen : 1
+instruction : 1111110000011100
+opcode : 1111
+ALU_SEL, JMP, LHI, REG_W : 0 0 0 0
+write data : 1111111011111111, write reg : 00, wen : 1
+data1 : 1111111111111111, data2 : 1111000000000000, reg1 : 11, reg2 : 00
+instruction : 1001000000001001
+opcode : 1001
+ALU_SEL, JMP, LHI, REG_W : 0 1 0 0
+data1 : 1111000000000000, data2 : 1111000000000000, reg1 : 00, reg2 : 00
+instruction : 0110000000000000
+opcode : 0110
+ALU_SEL, JMP, LHI, REG_W : 0 0 1 1
+data1 : 0000000000000000, data2 : 0000000000000000, reg1 : 00, reg2 : 00
+write data : 0000000000000000, write reg : 00, wen : 1
+instruction : 0110000100000001
+opcode : 0110
+ALU_SEL, JMP, LHI, REG_W : 0 0 1 1
+write data : 0000000100000000, write reg : 01, wen : 1
+data1 : 0000000000000000, data2 : 1111111100000000, reg1 : 00, reg2 : 01
+data1 : 0000000000000000, data2 : 0000000100000000, reg1 : 00, reg2 : 01
+write data : 0000000100000000, write reg : 01, wen : 1
+instruction : 0100010111111111
+opcode : 0100
+ALU_SEL, JMP, LHI, REG_W : 1 0 0 1
+data1 : 0000000100000000, data2 : 0000000100000000, reg1 : 01, reg2 : 01
+data1 : 0000000011111111, data2 : 0000000011111111, reg1 : 01, reg2 : 01
+write data : 0000000011111111, write reg : 01, wen : 1
+instruction : 0100001011111111
+write data : 0000000011111110, write reg : 10, wen : 1
+data1 : 0000000000000000, data2 : 0000000011110000, reg1 : 00, reg2 : 10
+data1 : 0000000000000000, data2 : 1111111111111111, reg1 : 00, reg2 : 10
+write data : 1111111111111111, write reg : 10, wen : 1
+instruction : 1111010000011100
+opcode : 1111
+ALU_SEL, JMP, LHI, REG_W : 0 0 0 0
+write data : 1111111111111111, write reg : 00, wen : 1
+data1 : 0000000011111111, data2 : 0000000000000000, reg1 : 01, reg2 : 00
+instruction : 1111100000011100
+data1 : 1111111111111111, data2 : 0000000000000000, reg1 : 10, reg2 : 00
+instruction : 1001000000010000
+opcode : 1001
+ALU_SEL, JMP, LHI, REG_W : 0 1 0 0
+data1 : 0000000000000000, data2 : 0000000000000000, reg1 : 00, reg2 : 00
+instruction : 1111010111000000
+opcode : 1111
+ALU_SEL, JMP, LHI, REG_W : 0 0 0 1
+write data : 0000000000000000, write reg : 01, wen : 0
+data1 : 0000000011111111, data2 : 0000000011111111, reg1 : 01, reg2 : 01
+write data : 0000000111111110, write reg : 11, wen : 1
+write data : 0000000111111110, write reg : 11, wen : 1
+instruction : 1111111111000000
+data1 : 0000000111111110, data2 : 0000000111111110, reg1 : 11, reg2 : 11
+data1 : 0000001111111100, data2 : 0000001111111100, reg1 : 11, reg2 : 11
+write data : 0000001111111100, write reg : 11, wen : 1
+instruction : 1001000000100001
+opcode : 1001
+ALU_SEL, JMP, LHI, REG_W : 0 1 0 0
+write data : 0000011111111000, write reg : 00, wen : 1
+data1 : 0000000000000000, data2 : 0000000000000000, reg1 : 00, reg2 : 00
+instruction : 1111110000011100
+opcode : 1111
+ALU_SEL, JMP, LHI, REG_W : 0 0 0 0
+data1 : 0000001111111100, data2 : 0000000000000000, reg1 : 11, reg2 : 00
+instruction : 0110000100000001
+opcode : 0110
+ALU_SEL, JMP, LHI, REG_W : 0 0 1 1
+data1 : 0000000000000000, data2 : 0000000011111111, reg1 : 00, reg2 : 01
+write data : 0000000100000000, write reg : 01, wen : 1
+data1 : 0000000000000000, data2 : 0000000100000000, reg1 : 00, reg2 : 01
+write data : 0000000100000000, write reg : 01, wen : 1
+instruction : 0100001000100000
+opcode : 0100
+ALU_SEL, JMP, LHI, REG_W : 1 0 0 1
+write data : 0010000000000000, write reg : 10, wen : 1
+data1 : 0000000000000000, data2 : 1111111111111111, reg1 : 00, reg2 : 10
+data1 : 0000000000000000, data2 : 0000000000100000, reg1 : 00, reg2 : 10
+write data : 0000000000100000, write reg : 10, wen : 1
+instruction : 0100001100000011
+opcode : 0100
+ALU_SEL, JMP, LHI, REG_W : 1 0 0 1
+write data : 0000000000100000, write reg : 11, wen : 1
+data1 : 0000000000000000, data2 : 0000001111111100, reg1 : 00, reg2 : 11
+data1 : 0000000000000000, data2 : 0000000000000011, reg1 : 00, reg2 : 11
+write data : 0000000000000011, write reg : 11, wen : 1
+instruction : 0110000001010101
+opcode : 0110
+ALU_SEL, JMP, LHI, REG_W : 0 0 1 1
+write data : 0000000000000011, write reg : 00, wen : 1
+data1 : 0000000000000000, data2 : 0000000000000000, reg1 : 00, reg2 : 00

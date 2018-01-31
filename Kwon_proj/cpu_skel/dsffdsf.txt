@@ -1,0 +1,64 @@
+ initial begin
+		ALU_SEL <= 0;
+		Jmp <= 0;
+		LHI <= 0;
+		RI <= 0;
+		Reg_write <= 0;
+	 end
+	 always @(opcode or func) begin
+		$display("opcode : %b", opcode);
+		if(opcode == 15 && func == `FUNC_ADD) begin
+			ALU_SEL <= 0;
+			Jmp <= 0;
+			LHI <= 0;
+			RI <= 1;
+			Reg_write <= 1;
+		end
+		if(opcode == 15 && func == `FUNC_WWD) begin
+			ALU_SEL <= 0;
+			Jmp <= 0;
+			LHI <= 0;
+			RI <= 1;
+			Reg_write <= 0;
+		end
+		if(opcode == `OPCODE_ADI) begin
+			ALU_SEL <= 1;
+			Jmp <= 0;
+			LHI <= 0;
+			RI <= 0;
+			Reg_write <= 1;
+		end
+		if(opcode == `OPCODE_LHI) begin
+			ALU_SEL <= 0;
+			Jmp <= 0;
+			LHI <= 1;
+			RI <= 0;
+			Reg_write <= 1;
+		end
+		else Reg_write <= 0;
+		if(opcode == `OPCODE_JMP) begin
+			ALU_SEL <= 0;
+			Jmp <= 1;
+			LHI <= 0;
+			RI <= 0;
+			Reg_write <= 0;
+		end
+		$display("ALU_SEL, JMP, LHI, REG_W : %b %b %b %b", ALU_SEL, Jmp, LHI, Reg_write);
+	end
+endmodule
+
+
+
+
+
+
+
+
+
+
+	assign ALU_SEL = opcode == `OPCODE_ADI ? 1 : 0;
+	assign Jmp = opcode == `OPCODE_JMP ? 1 : 0;
+	assign LHI = opcode == `OPCODE_LHI ? 1 : 0;
+	assign RI = (opcode == 15) ? 1 : 0;
+	assign Reg_write = ((opcode == 15 && func == `FUNC_ADD) || (opcode == `OPCODE_ADI) || (opcode == `OPCODE_LHI)) ? 1 : 0;
+	

@@ -1,0 +1,70 @@
+
+
+NET "ANODE[3]" LOC = E13;
+NET "ANODE[2]" LOC = F14;
+NET "ANODE[1]" LOC = G14;
+NET "ANODE[0]" LOC = D14;
+NET "LED[0]" LOC = K12;
+NET "LED[1]" LOC = P14;
+NET "LED[2]" LOC = L12;
+NET "LED[3]" LOC = N14;
+NET "LED[4]" LOC = P13;
+NET "LED[5]" LOC = N12;
+NET "LED[6]" LOC = P12;
+NET "LED[7]" LOC = P11;
+
+# PlanAhead Generated physical constraints 
+
+NET "register_selection[0]" LOC = J14;
+NET "register_selection[1]" LOC = J13;
+NET "SEG[7]" LOC = E14;
+NET "SEG[6]" LOC = G13;
+NET "SEG[5]" LOC = N15;
+NET "SEG[4]" LOC = P15;
+NET "SEG[3]" LOC = R16;
+NET "SEG[2]" LOC = F13;
+NET "SEG[1]" LOC = N16;
+NET "SEG[0]" LOC = P16;
+NET "cpu_enable" LOC = K13;
+NET "wwd_enable" LOC = K14;
+NET "MCLK" LOC = T9;
+NET "reset_clk" LOC = L14;
+NET "reset_cpu" LOC = L13;
+
+
+
+
+
+ reg [`WORD_SIZE-1:0] memory [0:`MEMORY_SIZE-1];  //memory where instruction is saved
+	 always@(reset_cpu) begin
+	 if(reset_cpu == 1'b1) begin                                  //when given reset_cpu, it will be initilized as below.
+		memory[0]  <= 16'h6000;	//	LHI $0, 0
+		memory[1]  <= 16'h6101;	//	LHI $1, 1
+		memory[2]  <= 16'h6202;	//	LHI $2, 2
+		memory[3]  <= 16'h6303;	//	LHI $3, 3
+		memory[4]  <= 16'hf01c;	//	WWD $0
+		memory[5]  <= 16'hf41c;	//	WWD $1
+		memory[6]  <= 16'hf81c;	//	WWD $2
+		memory[7]  <= 16'hfc1c;	//	WWD $3
+		memory[8]  <= 16'h4204;	//	ADI $2, $0, 4
+		memory[9]  <= 16'h47fc;	//	ADI $3, $1, -4
+		memory[10] <= 16'hf81c;	//	WWD $2
+		memory[11] <= 16'hfc1c;	//	WWD $3
+		memory[12] <= 16'hf6c0;	//	ADD $3, $1, $2
+		memory[13] <= 16'hf180;	//	ADD $2, $0, $1
+		memory[14] <= 16'hf81c;	//	WWD $2
+		memory[15] <= 16'hfc1c;	//	WWD $3
+		memory[16] <= 16'h9015;	//	JMP 21
+		memory[17] <= 16'hf01c;	//	WWD $0
+		memory[18] <= 16'hf180;	//	ADD $2, $0, $1
+		memory[19] <= 16'hf180;	//	ADD $2, $0, $1
+		memory[20] <= 16'hf180;	//	ADD $2, $0, $1
+		memory[21] <= 16'h6000;	//	LHI $0, 0
+		memory[22] <= 16'h4000;	//	ADI $0, $0, 0
+		memory[23] <= 16'hfd80;	//	ADD $2, $3, $1
+		memory[24] <= 16'hf01c;	//	WWD $0
+		memory[25] <= 16'hf41c;	//	WWD $1
+		memory[26] <= 16'hf81c;	//	WWD $2
+		memory[27] <= 16'hfc1c;	//	WWD $3
+	 end
+	 end
